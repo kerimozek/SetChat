@@ -26,13 +26,9 @@ class LoginViewController: UIViewController {
         
         return containerView
     }()
-    private let emailTextField: UITextField = {
-       let textField = UITextField()
-        textField.attributedPlaceholder = NSMutableAttributedString(string: "Email", attributes:[.foregroundColor: UIColor.white])
-        textField.borderStyle = .none
-        textField.textColor = .white
-        return textField
-    }()
+    
+    private let emailTextField = CustomTextField(placeholder: "Email")
+        
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
